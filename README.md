@@ -6,6 +6,10 @@
 
 **把 OpenClaw 上游案例转成可筛选、可追踪、可直接执行的中文数据资产。**
 
+> 中文世界里，最值得收藏的 OpenClaw 实战案例库。
+>
+> 收录真正 **能落地、能复用、能出效果** 的场景、提示词、配置、工作流与踩坑。
+
 同时，它也是一个面向中文用户的 **OpenClaw 实战案例库 / 灵感库 / 模板库**。
 
 [![CI](https://github.com/AIPMAndy/awesome-openclaw-Usecases-CN/actions/workflows/ci.yml/badge.svg)](https://github.com/AIPMAndy/awesome-openclaw-Usecases-CN/actions/workflows/ci.yml)
@@ -29,6 +33,14 @@
 
 1. **做中文实战案例入口**：帮助用户快速找到值得复用的 OpenClaw 用法
 2. **做结构化数据资产**：把案例沉淀为 `Markdown + JSON` 双格式，支持检索、追踪、自动同步
+
+你会在这里看到：
+
+- 真实可复制的 OpenClaw 用例
+- 一句话就能看懂的场景价值
+- 可复用的 Prompt / 配置 / 工作流
+- 不同平台（Feishu / Telegram / Discord / WhatsApp / Web / CLI）的实战玩法
+- 真实踩坑，而不是空泛概念
 
 > 一句话：
 > **这不是 OpenClaw 的“功能介绍”，而是 OpenClaw 的“结果清单 + 数据底座”。**
@@ -58,23 +70,23 @@
 
 ---
 
-## 快速开始：最值得先看的方向
+## 快速开始：最值得先看的 8 个方向
 
-### 私人助理 / Life OS
+### 1) 私人助理 / Life OS
 - [Feishu 私人助理：把 OpenClaw 变成你的日常协作中枢](./usecases/feishu-personal-assistant.md)
 - [Telegram 陪跑助理：把 AI 放进最高频的聊天入口](./usecases/telegram-coach-assistant.md)
 - [Founder Chief-of-Staff Agent：给创始人的 AI 参谋台](./usecases/founder-chief-of-staff.md)
 
-### 内容创作自动化
+### 2) 内容创作自动化
 - [内容改写工作流：一篇长文拆成多平台内容](./usecases/content-repurpose.md)
 
-### 办公提效 / 汇报自动化
+### 3) 办公提效 / 汇报自动化
 - [日报 / 周报 Agent：自动把碎片进展整理成可汇报内容](./usecases/weekly-report-agent.md)
 
-### 开发者与技术协作
+### 4) 开发者与技术协作
 - [GitHub PR Review Agent：在聊天里发起代码协作](./usecases/github-pr-review-agent.md)
 
-### 高级玩法
+### 5) 高级玩法
 - [Browser 自动化 Demo：让 Agent 不只是会说，还会点](./usecases/browser-automation-demo.md)
 - [知识库问答助手：把散落信息变成可问可答](./usecases/knowledge-base-qa.md)
 
@@ -219,6 +231,24 @@ make quickstarts TOP=20
 
 ---
 
+## 收录标准
+
+优先收录：
+
+- **真实跑通过**，不是停留在想法层面
+- **别人能复用**，不是只有作者自己看得懂
+- **信息密度高**，能看出怎么做、为什么有效
+- **有结果感**，最好带截图/GIF/流程/演示
+- **有传播性**，别人看一眼就想转发/收藏
+
+不太建议收录：
+
+- 只有概念，没有细节
+- 只有一句“可以做 XX”
+- 与 OpenClaw 关系很弱的普通 AI 用例
+
+---
+
 ## 贡献指南
 
 欢迎提交：
@@ -300,7 +330,7 @@ make quickstarts TOP=20
 - 更清晰的标签体系
 - 更容易参与的投稿机制
 
-如果这个仓库对你有帮助，欢迎：
+如果你愿意一起共建，欢迎：
 
 - Star
 - Watch
