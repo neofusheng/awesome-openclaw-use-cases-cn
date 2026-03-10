@@ -2,140 +2,168 @@
 
 <div align="center">
 
-# awesome-openclaw-Usecases-CN
+# 🔥 Awesome OpenClaw Use Cases CN
 
-**Turn upstream OpenClaw use cases into filterable, trackable, and execution-ready data assets.**
+**Don't ask what OpenClaw can do. See what people have already built.**
 
-[![CI](https://github.com/AIPMAndy/awesome-openclaw-Usecases-CN/actions/workflows/ci.yml/badge.svg)](https://github.com/AIPMAndy/awesome-openclaw-Usecases-CN/actions/workflows/ci.yml)
+> 13 real-world cases · Copy-paste Prompts & Configs · Markdown + JSON dual format
+>
+> The most comprehensive Chinese OpenClaw use case library
+
+[![CI](https://github.com/AIPMAndy/awesome-openclaw-use-cases-cn/actions/workflows/ci.yml/badge.svg)](https://github.com/AIPMAndy/awesome-openclaw-use-cases-cn/actions/workflows/ci.yml)
 [![Data](https://img.shields.io/badge/data-markdown%20%2B%20json-brightgreen)](docs/USECASES.json)
-[![Sync](https://img.shields.io/badge/sync-daily-blue)](.github/workflows/sync-upstream.yml)
-[![Stars](https://img.shields.io/github/stars/AIPMAndy/awesome-openclaw-Usecases-CN?style=social)](https://github.com/AIPMAndy/awesome-openclaw-Usecases-CN/stargazers)
+[![Sync](https://img.shields.io/badge/sync-daily%20auto-blue)](.github/workflows/sync-upstream.yml)
+[![Stars](https://img.shields.io/github/stars/AIPMAndy/awesome-openclaw-use-cases-cn?style=social)](https://github.com/AIPMAndy/awesome-openclaw-use-cases-cn/stargazers)
 
 </div>
 
-## 🆚 Why Choose This Repo?
+---
 
-| Dimension | Typical Use Case Lists | awesome-openclaw-Usecases-CN |
-|---|---|---|
-| Data format | Markdown only | Dual format: `Markdown + JSON` |
-| Change tracking | Manual comparison | Automatic `NEW/UPDATED/REMOVED` outputs |
-| Reliability signals | Subjective reading | `security_risk / source_confidence / reproducibility_score` |
-| Execution speed | You write steps manually | Auto-generated TopN `QUICKSTARTS` |
-| Maintenance | Manual updates | CI + daily scheduled sync PR |
+## 💡 What This Solves
 
-## 🚀 30-Second Quick Start
+Most people don't struggle with "Is OpenClaw powerful?" — they struggle with:
+
+- **What can it actually do?** → Browse real cases
+- **Which setups actually work?** → Every case here has been validated
+- **Where should I start?** → Check [QUICKSTARTS](docs/QUICKSTARTS.md)
+
+---
+
+## ⭐ Featured Cases (13 Real Scenarios)
+
+### 🤖 Personal Assistant / Life OS
+
+| Case | What It Does | Channel |
+|------|-------------|---------|
+| [Feishu Personal Assistant](usecases/feishu-personal-assistant.md) | Turn OpenClaw into your daily collaboration hub | Feishu |
+| [Telegram Coach](usecases/telegram-coach-assistant.md) | AI in your most-used messenger — ask anything, anytime | Telegram |
+| [Founder Chief-of-Staff](usecases/founder-chief-of-staff.md) | AI Chief of Staff for founders: briefings, decisions, follow-ups | Multi |
+| [Heartbeat Proactive Assistant](usecases/heartbeat-proactive-assistant.md) | Proactively checks email, calendar, notifications without being asked | All |
+| [Calendar Reminder Agent](usecases/calendar-reminder-agent.md) | Smart calendar sync and reminders — never miss a meeting | All |
+
+### ✍️ Content & Research
+
+| Case | What It Does | Channel |
+|------|-------------|---------|
+| [Content Repurpose](usecases/content-repurpose.md) | One long article → multi-platform content (Twitter, blog, etc.) | CLI / Chat |
+| [AI Research Digest](usecases/ai-research-digest.md) | Auto-fetch + summarize + push daily industry updates | Multi |
+
+### 📊 Productivity
+
+| Case | What It Does | Channel |
+|------|-------------|---------|
+| [Weekly Report Agent](usecases/weekly-report-agent.md) | Turn scattered updates into polished reports automatically | Feishu / Chat |
+| [WhatsApp Client Follow-up](usecases/whatsapp-client-followup.md) | Auto-classify client messages, remind follow-ups, never drop a lead | WhatsApp |
+| [Knowledge Base QA](usecases/knowledge-base-qa.md) | Turn scattered info into a queryable knowledge base | All |
+
+### 🛠 Developer & Advanced
+
+| Case | What It Does | Channel |
+|------|-------------|---------|
+| [GitHub PR Review Agent](usecases/github-pr-review-agent.md) | Code review from your chat — no browser switching | Discord / Chat |
+| [Browser Automation](usecases/browser-automation-demo.md) | Agent that clicks, not just talks — web automation | Web |
+| [Multi-Agent Orchestration](usecases/multi-agent-orchestration.md) | Multiple agents collaborating on complex tasks | CLI / Chat |
+
+---
+
+## 🆚 Why This Repo?
+
+| Dimension | Typical Lists | This Project |
+|-----------|--------------|--------------|
+| **Data format** | Markdown only | Markdown + JSON |
+| **Change tracking** | Manual | Auto `NEW / UPDATED / REMOVED` |
+| **Reliability** | Subjective | `security_risk` / `reproducibility_score` |
+| **Time to action** | DIY | [TopN Quickstarts](docs/QUICKSTARTS.md) ready to go |
+| **Maintenance** | Manual | CI + daily auto-sync |
+
+---
+
+## 🚀 Quick Start
+
+**Just browsing?** → Click the case links above
+
+**Want to run the data pipeline?** ↓
 
 ```bash
 chmod +x scripts/*.sh
 scripts/fetch_and_build.sh
 ```
 
-Verify outputs:
+Generates in `docs/`:
+
+| File | Purpose |
+|------|---------|
+| `USECASES.md` / `.json` | Full index (human + machine readable) |
+| `DIFF.md` / `.json` | Delta tracking |
+| `QUICKSTARTS.md` / `.json` | TopN execution-ready guides |
+| `STATS.md` | Category & risk distribution |
+| `SOURCES.md` | Source repos & license snapshots |
+
+<details>
+<summary>📎 More commands</summary>
 
 ```bash
-ls docs/USECASES.md docs/USECASES.json docs/STATS.md docs/SOURCES.md docs/DIFF.md docs/DIFF.json docs/QUICKSTARTS.md docs/QUICKSTARTS.json
-```
-
-## 📦 What You Get
-
-Each build generates these artifacts in `docs/`:
-
-- `USECASES.md`: human-readable Chinese index
-- `USECASES.json`: machine-readable index
-- `STATS.md`: category, risk, and license distribution
-- `SOURCES.md`: source repos, commits, and license snapshots
-- `DIFF.md` / `DIFF.json`: delta report (`NEW/UPDATED/REMOVED`)
-- `QUICKSTARTS.md` / `QUICKSTARTS.json`: TopN execution-ready guides
-
-## 🔍 Typical Queries
-
-```bash
-# High-risk but high-reproducibility use cases
-scripts/query_usecases.sh --risk high --min-confidence 70 --min-repro 60 --limit 20
-
-# Keyword search
+# Query cases
 scripts/query_usecases.sh --keyword security --limit 10
-```
-
-## 🛠 Core Commands
-
-```bash
-# Full sync (fetch upstream + generate all artifacts)
-scripts/fetch_and_build.sh
-
-# Build index from local upstream repositories only
-scripts/generate_usecases_index.sh --src-a /path/to/repo-a --src-b /path/to/repo-b
-
-# Generate source and license snapshots
-scripts/generate_sources_report.sh --src-a /path/to/repo-a --src-b /path/to/repo-b
 
 # Generate delta report
 scripts/generate_usecases_diff.sh --old docs/USECASES.prev.json --new docs/USECASES.json
 
-# Generate TopN quickstarts
-scripts/generate_quickstarts.sh --index docs/USECASES.json --top 20
-```
-
-## ⚙️ Makefile
-
-```bash
+# Makefile shortcuts
 make test
-make quality
 make build
-make query Q=security
+make query Q=xxx
 make quickstarts TOP=20
 ```
 
-## 🤖 Automation
-
-- CI: runs `lint + test + build smoke` on every Push/PR
-- Scheduled sync: runs daily at UTC `02:00` and opens update PRs
-- PR summary includes: `NEW / UPDATED / REMOVED / Top Quickstarts`
-
-## 💡 Use Cases
-
-- You are building OpenClaw products and need reusable patterns quickly
-- You are building an internal knowledge base with machine-readable JSON
-- You create tutorials/content and need continuous case tracking
-- You prefer shipping runnable demos before deep customization
-
-## 🧱 Repository Structure
-
-- `scripts/fetch_and_build.sh`: pipeline entrypoint
-- `scripts/generate_usecases_index.sh`: index and scoring
-- `scripts/generate_sources_report.sh`: source/license snapshots
-- `scripts/generate_usecases_diff.sh`: delta report
-- `scripts/generate_quickstarts.sh`: TopN quickstart generator
-- `scripts/query_usecases.sh`: query and filtering
-- `scripts/run_quality_gates.sh`: quality gates
-
-## 🗺️ Roadmap
-
-- [ ] Add finer-grained tags (industry, stack, complexity)
-- [ ] Add similarity-based deduplication and merge strategy
-- [ ] Provide a static search UI powered by JSON
-- [ ] Add executable quickstart templates/scaffolding
-
-## 🤝 Contributing
-
-Issues and PRs are welcome for:
-
-- Adding new upstream sources
-- Improving classification/scoring rules
-- Improving sync scripts and test coverage
-- Improving docs and compliance guidance
-
-## 📄 License
-
-- This repository is licensed under [Apache-2.0](LICENSE)
-- Additional terms are included in `LICENSE`
-
-## 👨‍💻 Author
-
-Maintainer: **AI酋长Andy**
-
-Business contact (WeChat): `AIPMAndy`
+</details>
 
 ---
 
-If this project helps you, please consider giving it a ⭐ Star.
+## 🤝 Contributing
+
+**Easiest way:** Open an [Issue](https://github.com/AIPMAndy/awesome-openclaw-use-cases-cn/issues/new) describing:
+- What you built with OpenClaw
+- Which capabilities you used
+- Results & lessons learned
+
+I'll help format it into a publishable case.
+
+**Want to submit a PR?** See [case template](templates/usecase-template.md) and [CONTRIBUTING.md](CONTRIBUTING.md).
+
+---
+
+## 🗺️ Roadmap
+
+- [x] README restructure + bilingual
+- [x] Case templates + contribution guide
+- [x] 13 example cases
+- [x] CI + daily auto-sync
+- [ ] Screenshots / GIFs / demo videos
+- [ ] Visual navigation page
+- [ ] Tag-based search (platform / difficulty / impact)
+- [ ] Weekly curated picks / Newsletter
+
+---
+
+## 📄 License
+
+[Apache-2.0](LICENSE) (with additional terms — see LICENSE file)
+
+## 👨‍💻 Author
+
+**AI酋长Andy** — Ex-Tencent/Baidu AI Product Expert, AI Business Strategy Consultant
+
+Business inquiries: WeChat `AIPMAndy`
+
+---
+
+[OpenClaw Docs](https://docs.openclaw.ai) · [OpenClaw GitHub](https://github.com/openclaw/openclaw) · [OpenClaw Community](https://discord.com/invite/clawd)
+
+---
+
+<div align="center">
+
+**Found it useful? Give it a ⭐ Star to help others discover this project**
+
+</div>
